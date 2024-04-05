@@ -1,0 +1,74 @@
+
+<div class="fourth-cont">
+<div class="link"><a href="{% url 'menu' %}">Go back</a></div>
+<h3>Item's details are</h3>
+<table>
+ <th>
+  Food
+ </th>
+ <th>
+  Description
+ </th>
+ <th>
+  Date-updated
+ </th>
+ <th>
+  Completed
+ </th>
+ <tr>
+  <td>{{content.title}}</td>
+  <td>{{content.description}}</td>
+  <td>{{content.create|date:"d/m/Y"}}</td>
+  <td>{{content.complete}}</td>
+ </tr>
+</table>
+</div>
+<style>
+ *{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ .fourth-cont{
+  background-color:whitesmoke;
+  width:650px;
+  height:40vh;
+  box-sizing: border-box;
+  padding:15px;
+  margin:auto;
+  border-radius:15px;
+  margin-top:30vh;
+ }
+ h3{
+  background-color:transparent;
+  width:fit-content;
+  margin:auto
+ }
+ table{
+  background-color:transparent;
+  border:2px solid black;
+  margin:auto;
+  margin-top:15px;
+  width:600px;
+  border-collapse: collapse;
+ }
+ th,tr,td{
+  border:2px solid rgba(0,0,0,0.2);
+ }
+ tr:nth-child(even){
+  background-color:transparent;
+  height: 30px;
+  text-align: center;
+ }
+ .link{
+  background-color: whitesmoke;
+  width:80px;
+  height:30px;
+  border-radius:10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid rgba(0,0,0,0.2)
+ }
+ a{
+  text-decoration: none;
+ }
+</style>

@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="second-cont">
+<h3>Login Your account here</h3>
+<form action="/login-user" method="POST">
+ {% csrf_token %}
+ <div class="user">
+ <label for="">Username</label>
+ <div class="user-input">
+  <i class=" icon-user fa-regular fa-user" aria-hidden="true"></i>
+ <input type="text", id="username", name="username", placeholder='username here',required>
+ </div>
+ </div>
+ <div class="pass">
+ <label for="">Password</label>
+ <div class="input-pass">
+  <i class=" icon-key fa-solid fa-lock" aria-hidden="true"></i>
+ <input type="password", id="password", name="password", placeholder='Password here',required>
+ </div>
+ </div>
+ <div class="btn">
+  <button type="submit" class="bten">Login</button>
+ </div>
+</form>
+</div>
+<style>
+ *{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ .second-cont{
+  background-color: whitesmoke;
+  width:30vw;
+  height:45vh;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:30vh;
+  padding:20px;
+  border-radius:10px; 
+ }
+ form{
+  display:block;
+  font-size: 20px;
+ }
+ h3{
+ background-color:none;
+ text-align: center;
+ font-size: 25px;
+ }
+.pass, .user{
+ display:block;
+ margin-top:30px;
+ /* background-color:aliceblue; */
+ height:10vh;
+}
+.user-input, .input-pass{
+ width:100%;
+ min-height:45%;
+ height:fit-content;
+ background-color: transparent;
+ display:flex;
+ gap:3px;
+ font-size: 20px;
+ margin-top:8px;
+ border-bottom: 3px solid rgba(0,0,0,0.4);
+ 
+}
+.user-input i, .input-pass i{
+ width:30px;
+ margin-top:auto;
+ margin-bottom: auto;
+ margin-left:5px;
+}
+label{
+ size: 20px;
+}
+input{
+ width:80%;
+ font-size: 20px;
+ border:none;
+ outline:none;
+ padding-left: 15px;
+ padding-right: 15px;
+ background-color:transparent;
+}
+.btn{
+ background-color:none;
+ width:fit-content;
+ margin:auto;
+ border:none
+}
+.bten{ 
+ background-color:none;
+ height:35px;
+ width:90px;
+ border:2px solid rgba(0,0,0,0.1);
+ border-radius:10px;
+ cursor: pointer;
+}
+</style>

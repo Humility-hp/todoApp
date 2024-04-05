@@ -1,0 +1,79 @@
+<div class="sixth-cont">
+<h3>hello {{request.user}}</h3>
+<p>You can add the nth item to your list</p>
+
+<form action="/add-item" method="POST">
+{% csrf_token %}
+<div class="title">
+<label for="">Title</label>
+<input type="text", id="title", name="title", placeholder="New-item", Required>
+</div> 
+<br>
+<div class="desc">
+<label for="">Description</label>
+<input type="text", id="describe", name="describe", placeholder="New-Description", Required> 
+</div>
+<br>
+<div class="comp">
+<label for="">Completed</label>
+<input type="text",id="completed", name="completed", placeholder="True/False", Required>
+</div>
+<br>
+<div class="btn"><button type="submit">add-item</button></div>
+</form>
+</div>
+
+<style>
+ *{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+ }
+ .sixth-cont{
+  background-color:whitesmoke;
+  width:600px;
+  height:45vh;
+  margin:auto;
+  margin-top:30vh;
+  padding:10px;
+  border-radius:15px
+ }
+ h3,p{
+  background-color:transparent;
+  width:100%;
+  text-align: center;
+  margin-top:5px
+ }
+ .title, .desc, .comp{
+  background-color:transparent;
+  box-sizing: border-box;
+  padding:5px;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-bottom: 3px solid rgba(0,0,0,0.2)
+ }
+ input{
+  width:80%;
+  height:35px;
+  border:none;
+  box-sizing: border-box;
+  padding:5px;
+  outline: none;
+  background-color:transparent;
+ } 
+ .btn{
+  background-color:transparent;
+  width:120px;
+  height:45px;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  cursor: pointer;
+  border-radius:10px;
+  border: 2px solid rgba(0,0,0,0.2)
+ }
+ button{
+  border:none;
+  background-color:transparent;
+ }
+</style>

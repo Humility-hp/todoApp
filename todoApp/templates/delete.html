@@ -1,0 +1,72 @@
+<div class="fifth-cont">
+<div class="link"><a href="{% url 'menu' %}">Go back</a></div>
+<form method="POST">
+ {% csrf_token %}
+ <p>are you sure you want to delete this task</p>
+ <div class="btn">
+  <button>Delete</button>
+ </div>
+</form>
+</div>
+<!-- styling the delete page -->
+<style>
+*{
+ font-family: Arial, Helvetica, sans-serif;
+}
+.fifth-cont{
+ background-color:whitesmoke;
+ width:500px;
+ height:25vh;
+ margin:auto;
+ margin-top: 40vh;
+ box-sizing: border-box;
+ padding:20px;
+ border-radius:15px
+}
+p{
+ background-color:transparent;
+ width: fit-content;
+ margin:auto;
+ margin-top:20px;
+}
+input{
+ margin-top:30px;
+ margin-left:auto;
+ margin-right:auto
+}
+.btn{
+ background-color:transparent;
+ margin-top:20px;
+ height:fit-content;
+ width:fit-content;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ margin-left:auto;
+ margin-right:auto;
+}
+button{
+ height:35px;
+ width:80px;
+ border-radius:10px;
+ background-color:transparent;
+ border:2px solid rgba(0,0,0,0.2);
+ cursor:pointer
+}
+a{
+ background-color:transparent;
+ width:80px;
+ text-decoration: none;
+ text-align: center;
+}
+.link{
+ background-color:transparent;
+ width: 80px;
+ height: 30px;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ border-radius:10px;
+ border:2px solid rgba(0,0,0,0.2)
+}
+</style>
